@@ -111,7 +111,7 @@ export const Intro = () => {
             href="https://www.linkedin.com/in/sandeep-sharma-9a8861229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
             target="_blank"
           >
-          <img src="https://th.bing.com/th/id/OIP.d5futl9_HMoiD0hPTuYylwHaHX?rs=1&pid=ImgDetMain" className="w-8 h-8"  alt="" />
+          <Image src="https://th.bing.com/th/id/OIP.d5futl9_HMoiD0hPTuYylwHaHX?rs=1&pid=ImgDetMain" width={32} height={32} alt="" />
           </a>
 
           <a
@@ -119,21 +119,21 @@ export const Intro = () => {
             href="https://github.com/SandeepSharma2002"
             target="_blank"
           >
-            <img src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" className="w-10 mx-3 h-8"  alt="" />
+            <Image src="https://logos-world.net/wp-content/uploads/2020/11/GitHub-Symbol.png" width={40} height={32} style={{margin:"0px 8px", width:"auto", height:"auto"}}  alt="" />
           </a>
           <a
             className="bg-white p-4 text-2xl text-black flex items-center gap-2  rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://leetcode.com/sandeepsharma100/"
             target="_blank"
           >
-            <img src="https://nil1729.github.io/LEETCODE-001/images/logo.png" className="w-8 h-8" alt="" />
+            <Image src="https://nil1729.github.io/LEETCODE-001/images/logo.png" width={32} height={32} alt="" />
           </a>
           <a
             className="bg-white p-4 text-2xl text-black flex items-center gap-2  rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
             href="https://auth.geeksforgeeks.org/user/indialover2002"
             target="_blank"
           >
-            <img src="https://media.geeksforgeeks.org/img-practice/gfg_200X200.png" className="w-8 h-8" alt="" />
+            <Image src="https://media.geeksforgeeks.org/img-practice/gfg_200X200.png" width={32} height={32}  alt="" />
           </a>
         </div>
       </motion.div>

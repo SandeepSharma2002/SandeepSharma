@@ -1,0 +1,33 @@
+"use client"
+import React, { useEffect } from "react";
+import { useFormStatus } from "react-dom";
+import { FaPaperPlane } from "react-icons/fa";
+import { ToastContainer, toast } from "react-toastify";
+
+export default function SubmitBtn() {
+  const { pending } = useFormStatus();
+
+  useEffect(()=>{
+    pending && toast.success("Thanks for Contacting!")
+  },[pending])
+
+  return (
+    <>
+    <ToastContainer/>
+    <button
+      type="submit"
+      className="group flex items-center bg-gradient-to-r from-[#22d3ee] to-[#0ea5e9] justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65"
+      disabled={pending}
+    >
+      {pending ? (
+        <div className="h-5 w-5 animate-spin rounded-full border-b-2 border-white"></div>
+      ) : (
+        <>
+          Submit{" "}
+          <FaPaperPlane className="text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />{" "}
+        </>
+      )}
+    </button>
+    </>
+  );
+}
