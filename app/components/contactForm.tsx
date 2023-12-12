@@ -48,8 +48,8 @@ export default function Contact() {
           <input
             className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
             type="email"
-            id="email"
-            name="email"
+            id="senderEmail"
+            name="senderEmail"
             required
             maxLength={500}
             placeholder="Your email"
