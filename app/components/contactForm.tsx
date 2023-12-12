@@ -30,13 +30,13 @@ export default function Contact() {
     const serviceId:any = process.env.NEXT_PUBLIC_SID; 
     const templateId:any = process.env.NEXT_PUBLIC_TID; 
     const publicKey:any = process.env.NEXT_PUBLIC_PK; 
-    
+
     emailjs
       .sendForm(
         serviceId,
         templateId,
         form.current,
-        publicKey
+        "S4CQDI26yJxGHI3FF"
       )
       .then(
         (result) => {
