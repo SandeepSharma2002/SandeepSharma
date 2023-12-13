@@ -69,7 +69,7 @@ export const projectsData = [
       "This is my website, which delves into a collection of my latest projects, showing the passion and dedication.",
     tags: ["React", "Next.js", "Framer Motion", "Tailwind", "EmailJs"],
     imageUrl: project1,
-    liveLinks:"https://sandeep-sharma.vercel.app/",
+    liveLinks:"https://sandeep-sharma-portfolio.vercel.app/",
     gitLinks:"https://github.com/SandeepSharma2002/SandeepSharma"
   },
   {
