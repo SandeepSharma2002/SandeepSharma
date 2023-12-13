@@ -41,21 +41,13 @@ export const Intro = () => {
             <Image
               src={Sandeep}
               alt="Sandeep Sharma"
-              width="200"
-              height="200"
+              width="400"
+              height="400"
               quality="95"
               priority={true}
-              className="h-24 w-24 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
+              className="h-28 w-28 rounded-full border-[0.35rem] border-white object-cover shadow-xl"
             />
           </motion.div>
-          <motion.span
-            initial={{ scale: 0, translateX: -15, translateY: -15 }}
-            animate={{ scale: 1, translateX: 0, translateY: 0 }}
-            transition={{ duration: 0.3, type: "tween", delay: 0.2 }}
-            className="text-4xl absolute bottom-0 right-0"
-          >
-            👋
-          </motion.span>
         </div>
       </div>
       <motion.p
@@ -98,7 +90,7 @@ export const Intro = () => {
 
           <a
             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-            href="/SandeepSharma_Resume.pdf"
+            href="/Sandeep_Sharma_Resume.pdf"
             download
           >
             Download CV{" "}

@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="!scroll-smooth ">
       <body className={`${inter.className} bg-oxford_blue text-gray-950 relative h-full pt-28 sm:pt-36`}>
-        <div className='bg-white opacity-30 absolute top-[-8rem] right-[11rem] h-[31.25rem] w-[31.25rem] -z-10 rounded-full blur-[10rem] sm:w-[68.75rem]'></div>
+        <div className='bg-white opacity-30 absolute top-[-6rem] h-[32rem] w-full -z-10 rounded-full blur-[10rem]'></div>
         <ActiveSectionContextProvider>
         <Header/>
         {children}
