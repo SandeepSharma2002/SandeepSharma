@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "./Section-heading";
 import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
@@ -8,12 +8,38 @@ import "react-toastify/dist/ReactToastify.css";
 import { FaPaperPlane } from "react-icons/fa";
 import {sendEmail} from "@/actions/sendEmail"
 import SubmitBtn from "./Submit-btn";
+import { usePending } from "@/context/pending";
 
 export default function Contact() {
   const { ref } = useSectionInView("Contact");
+  const {Pending,setPending} = usePending();
+  
+    const [formData, setFormData] = useState({
+      senderEmail: '',
+      message: '',
+    });
+  
+    const handleChange = (e:any) => {
+      const { name, value } = e.target;
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    };
+
+    useEffect(()=>
+    {
+      if(!Pending && formData.senderEmail !== '')
+      {
+        setFormData({senderEmail:"", message:""});
+        toast.success("Thanks For Contacting!")
+      }
+    },[Pending])
+  
 
   return (
     <>
+      <ToastContainer/>
       <motion.section
         id="contact"
         ref={ref}
@@ -52,6 +78,8 @@ export default function Contact() {
             name="senderEmail"
             required
             maxLength={500}
+            value={formData.senderEmail}
+            onChange={handleChange}
             placeholder="Your email"
           />
           <textarea
@@ -59,6 +87,8 @@ export default function Contact() {
             id="message"
             name="message"
             placeholder="Your message"
+            value={formData.message}
+            onChange={handleChange}
             required
             maxLength={5000}
           />

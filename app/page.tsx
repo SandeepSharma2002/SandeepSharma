@@ -1,3 +1,4 @@
+import { PendingContextProvider } from "@/context/pending";
 import SectionDivider from "./components/Divider";
 import About from "./components/about";
 import Contact from "./components/contactForm";
@@ -14,10 +15,12 @@ export default function Home() {
       <SectionDivider />
       <About />
       <Projects />
-      <Skills/>
-      <Experience/>
-      <Contact/>
-      <Footer/>
+      <Skills />
+      <Experience />
+      <PendingContextProvider>
+        <Contact />
+      </PendingContextProvider>
+      <Footer />
     </main>
   );
 }

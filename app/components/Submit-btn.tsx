@@ -1,10 +1,16 @@
 "use client"
+import { usePending } from "@/context/pending";
 import React, { useEffect } from "react";
 import { useFormStatus } from "react-dom";
 import { FaPaperPlane } from "react-icons/fa";
 
 export default function SubmitBtn() {
   const { pending } = useFormStatus();
+  const {Pending,setPending} = usePending();
+
+  useEffect(()=>{
+        setPending(pending);
+  },[pending])
 
   return (
     <>
